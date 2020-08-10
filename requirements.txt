@@ -1,5 +1,7 @@
 Flask==1.1.2
 Flask-RESTful==0.3.8
+flask-restplus==0.13.0
+Werkzeug==0.16.1
+SQLAlchemy==1.3.18
 JsonForm==0.0.2
 gunicorn==20.0.4
-dialogflow==1.0.0
