@@ -14,7 +14,7 @@ host=os.environ.get('HOST')
 port=os.environ.get('PORT')
 db_name=os.environ.get('DB_NAME')
 ## DB connection
-DB_CONNECTION_STRING = 'postgresql://'+str(db_username)+':'+str(db_password)+'@'+str(host)+':'+str(port)+'/'+str(db_name)
+DB_CONNECTION_STRING = 'postgres://vntugecoaypdwx:f6f2e2061bd82e591f8ff63892499b0b8fb1ea0c0c9afa89b7a51ed7685e49f0@ec2-3-217-87-84.compute-1.amazonaws.com:5432/d1a958r4jes78'
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_CONNECTION_STRING
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db = SQLAlchemy(app)
