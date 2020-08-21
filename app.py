@@ -10,4 +10,4 @@ api.init_app(app)
 api.add_resource ( Signup, '/signup' )
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
