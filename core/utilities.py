@@ -16,5 +16,4 @@ def success ( data=None, message=None ) :
 		"data":data,
 		"status":'Success'
 	}
-
 	return Response ( json.dumps(value), status=200, mimetype='application/json' )
