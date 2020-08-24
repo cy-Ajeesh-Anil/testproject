@@ -4,6 +4,7 @@ from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
+from flask_marshmallow import Marshmallow
 
 
 
@@ -14,7 +15,8 @@ if app.config['ENV']=='production':
 	app.config.from_object("config.ProductionConfig")
 if app.config['ENV']=='development':
 	app.config.from_object("config.DevelopmentConfig")
-
+if app.config['ENV']=='localdevelopment':
+	app.config.from_object("config.LocalDevelopmentConfig")
 
 
 
@@ -23,7 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = app.config['DB_CONNECTION_STRING']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
-
+marshmallow = Marshmallow(app)
 
 #mail server configuration
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
