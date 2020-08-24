@@ -13,8 +13,8 @@ def select_states():
 		return states
 	return None
 
-def select_country_states(cid=None):
-	states = States.query.filter_by(country_id=cid)
+def select_country_states(country_id=None):
+	states = States.query.filter_by(country_id=country_id)
 	if states:
 		return states
 	return None
@@ -25,8 +25,8 @@ def select_cities():
 		return cities
 	return None
 
-def select_state_cities(sid=None):
-	cities = City.query.filter_by(state_id=sid)
+def select_state_cities(state_id=None):
+	cities = City.query.filter_by(state_id=state_id)
 	if cities:
 		return cities
 	return None

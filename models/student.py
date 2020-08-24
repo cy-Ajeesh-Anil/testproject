@@ -40,7 +40,7 @@ class Profile(db.Model):
 class Emergency_contact(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     student_id = db.Column(db.Integer, db.ForeignKey('student.id'))
-    student = relationship("Student", backref=backref("student", uselist=False))
+    student = relationship("Student", backref=backref("students", uselist=False))
     emy_name = db.Column(db.String)
     emy_phone = db.Column(db.String)
     emy_email = db.Column(db.String)

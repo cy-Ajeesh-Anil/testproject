@@ -1,5 +1,5 @@
 from models.enumeration_tables import Country,States,City,Language
-from settings import app,db,ma
+from settings import app,db,marshmallow
 from flask_restplus import Resource
 from core import failure, success
 from CRUD.enumeration_CRUD import select_countries,select_states,select_country_states,select_cities,\
@@ -31,8 +31,8 @@ class ListStates(Resource):
 ### Listing all states based on countries
 class ListCountryStates(Resource):
     @jwt_required
-    def get(self, cid):
-        all_states=select_country_states(cid)
+    def get(self, country_id):
+        all_states=select_country_states(country_id)
         if all_states:
             states = enumeration_schemas.states_schema.dump(all_states)
             return success(data=states)
@@ -51,8 +51,8 @@ class ListCities(Resource):
 ### Listing all cities based on states
 class ListStatesCities(Resource):
     @jwt_required
-    def get(self,sid):
-        all_cities = select_state_cities(sid)
+    def get(self,state_id):
+        all_cities = select_state_cities(state_id)
         if all_cities:
             cities = enumeration_schemas.cities_schema.dump(all_cities)
             return success(data=cities)

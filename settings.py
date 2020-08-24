@@ -25,7 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = app.config['DB_CONNECTION_STRING']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
-ma = Marshmallow(app)
+marshmallow = Marshmallow(app)
 
 #mail server configuration
 app.config["MAIL_SERVER"] = "smtp.gmail.com"

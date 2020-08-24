@@ -12,9 +12,9 @@ api.add_resource(Login,'/login')
 api.add_resource(RefreshTtoken,'/refresh-token')
 api.add_resource(ListCountries,'/countries')
 api.add_resource(ListStates,'/states')
-api.add_resource(ListCountryStates,'/states/<cid>')
+api.add_resource(ListCountryStates,'/states/<country_id>')
 api.add_resource(ListCities,'/cities')
-api.add_resource(ListStatesCities,'/cities/<sid>')
+api.add_resource(ListStatesCities,'/cities/<state_id>')
 api.add_resource(ListLanguages,'/languages')
 
 if __name__ == '__main__':
