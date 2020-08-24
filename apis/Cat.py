@@ -14,7 +14,7 @@ CATS = [
 
 @api.route('/')
 class CatList(Resource):
-    @api.doc('list_cats')
+    # @api.doc('list_cats')
     @api.marshal_list_with(cat)
     def get(self):
         '''List all cats'''
@@ -25,7 +25,7 @@ class CatList(Resource):
 @api.param('id', 'The cat identifier')
 @api.response(404, 'Cat not found')
 class Cat(Resource):
-    @api.doc('get_cat')
+    # @api.doc('get_cat')
     @api.marshal_with(cat)
     def get(self, id):
         '''Fetch a cat given its identifier'''
