@@ -10,7 +10,7 @@ def check_student_by_username ( username=None,verified=None ) :
 	return None
 
 def check_student_by_username_password( username,password):
-	student=db.session.query(Student).filter_by(username=username,password=password).first()
+	student=db.session.query(Student).filter_by(username=username,password=password,verified=True).first()
 	if student :
 		return student
 	return None
