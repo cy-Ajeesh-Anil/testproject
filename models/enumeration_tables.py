@@ -24,6 +24,7 @@ class City(db.Model):
     city_name = db.Column(db.String)
     state_id = db.Column(db.Integer, db.ForeignKey('states.id'))
     states = relationship("States",back_populates="city")
+    
 ### Table for different languages
 class Language(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
