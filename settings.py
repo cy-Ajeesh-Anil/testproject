@@ -14,7 +14,6 @@ app = Flask(__name__, template_folder="templates")
 if app.config['ENV']=='production':
 	app.config.from_object("config.ProductionConfig")
 if app.config['ENV']=='development':
-	# print(f'app.config["ENV"]')
 	app.config.from_object("config.DevelopmentConfig")
 if app.config['ENV']=='localdevelopment':
 	app.config.from_object("config.LocalDevelopmentConfig")
