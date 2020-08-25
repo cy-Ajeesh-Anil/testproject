@@ -4,7 +4,7 @@ from flask import request
 from flask_jwt_extended import create_access_token, jwt_refresh_token_required, get_jwt_identity
 from flask_restplus import Resource
 
-from CRUD import check_student_by_username_password
+from CRUD import check_student_by_username_password, check_student_by_username
 from core import failure, success
 
 class Login(Resource):
@@ -17,6 +17,9 @@ class Login(Resource):
         # which marks the token as fresh or non-fresh accordingly.
         # As we just verified their username and password, we are
         # going to mark the token as fresh here.
+        student = check_student_by_username ( username )
+        if not student.verified :
+            return failure ( message='Your account has not been verified' )
         expires = datetime.timedelta ( hours=10 )
         token = create_access_token ( username, expires_delta=expires )
         from flask_jwt_extended import create_refresh_token
