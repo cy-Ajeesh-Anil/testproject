@@ -13,10 +13,6 @@ class Login(Resource):
         password = request.json.get('password', None)
         if not check_student_by_username_password(username,password):
             return failure(message= "Bad username or password")
-        # create_access_token supports an optional 'fresh' argument,
-        # which marks the token as fresh or non-fresh accordingly.
-        # As we just verified their username and password, we are
-        # going to mark the token as fresh here.
         student = check_student_by_username ( username )
         if not student.verified :
             return failure ( message='Your account has not been verified' )
