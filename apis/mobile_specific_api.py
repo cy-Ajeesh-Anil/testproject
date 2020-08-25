@@ -29,6 +29,5 @@ InScholaris' conversational AI Chatbots and framework help you to compare and fi
 
 
 class MobileOnboardImage(Resource):
-    @jwt_required
     def get(self):
         return success(data=select_onboard_images(),message='List of onbaording images')
