@@ -1,7 +1,8 @@
 
 from settings import app
-from apis import api, Signup, VerifyStudent, Login,RefreshTtoken,ListCountries,ListStates,ListCountryStates,ListCities,\
-ListStatesCities,ListLanguages
+from apis import api, Signup, VerifyStudent, Login, RefreshTtoken, ListCountries, ListStates, ListCountryStates, \
+    ListCities, \
+    ListStatesCities, ListLanguages, MobileOnboardImage
 
 # app = Flask(__name__)
 api.init_app(app)
@@ -16,6 +17,7 @@ api.add_resource(ListCountryStates,'/api/v1/states/<country_id>')
 api.add_resource(ListCities,'/api/v1/cities')
 api.add_resource(ListStatesCities,'/api/v1/cities/<state_id>')
 api.add_resource(ListLanguages,'/api/v1/languages')
+api.add_resource(MobileOnboardImage,'/api/v1/mobile-onboard-image')
 
 if __name__ == '__main__':
     app.run(debug=True)
