@@ -10,13 +10,13 @@ def select_onboard_images ( ) :
 		{
 			'id':1,
 			"image":app.config['BACK_END_URL']+'static/mobile_onboard_image_1.png',
-			"description":"""One platform, Many countries, Every University"""
+			"description":"""Create You profile
+Create your InScholaris account, You could attach the digital copies of your educational transcripts, IELTS Score Card etc to your profile/account"""
 		},
 		{
 			'id':2,
 			"image" : app.config [ 'BACK_END_URL' ] + 'static/mobile_onboard_image_2.png',
-			"description":"""Create You profile
-Create your InScholaris account, You could attach the digital copies of your educational transcripts, IELTS Score Card etc to your profile/account"""
+			"description":"""One platform, Many countries, Every University"""
 		},
 		{
 			'id':3,
