@@ -10,7 +10,7 @@ def failure ( errors=None, message=None ) :
 	raise e
 
 
-def success ( data=None, message=None ) :
+def success ( data={}, message=None ) :
 	value={
 		"message":message,
 		"data":data,
