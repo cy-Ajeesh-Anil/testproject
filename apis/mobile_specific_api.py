@@ -5,6 +5,7 @@ from core import success
 from settings import app
 
 
+
 def select_onboard_images ( ) :
 	return [
 		{
