@@ -4,7 +4,7 @@ from .student_api import Signup,VerifyStudent
 from .authentication_apis import Login,RefreshTtoken
 from .enumeration_apis import ListCountries,ListStates,ListCountryStates,ListCities,ListStatesCities,ListLanguages
 from .mobile_specific_api import MobileOnboardImage
-
+from .profile_upload_apis import ProfileImageUpdate
 api = Api(
     title='InScholaris API',
     version='1.0',

@@ -10,7 +10,7 @@ def select_onboard_images ( ) :
 		{
 			'id':1,
 			"image":app.config['BACK_END_URL']+'static/mobile_onboard_image_1.png',
-			"description":"""Create You profile
+			"description":"""Create Your profile
 Create your InScholaris account, You could attach the digital copies of your educational transcripts, IELTS Score Card etc to your profile/account"""
 		},
 		{
@@ -30,4 +30,4 @@ InScholaris' conversational AI Chatbots and framework help you to compare and fi
 
 class MobileOnboardImage(Resource):
     def get(self):
-        return success(data=select_onboard_images(),message='List of onbaording images')
+        return success(data=select_onboard_images(),message='List of onboarding images')

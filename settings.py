@@ -36,6 +36,11 @@ app.config['MAIL_DEFAULT_SENDER'] = 'test.inscholaris@gmail.com' # enter your em
 app.config['MAIL_PASSWORD'] = 'cycloides@123!' # mail password
 mail = Mail(app)
 
+##Profile upload folder
+UPLOAD_FOLDER = 'students_uploads/profile'
+# ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 
 #Authentication config
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = datetime.timedelta(days=5)
