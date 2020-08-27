@@ -19,10 +19,9 @@ class Signup ( Resource ) :
 		if request['password'].strip()=='':
 			return failure(message='Invalid password')
 		if not bool(re.search(r"^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", request['username'].strip())):
-		# if(re.search('^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$',request['username'])):
 			return failure(message='Invalid email')
 		if check_student_by_username(username=request['username'].strip()):
-			return failure(message='Email already registered')
+			return failure(message='Email already Exist')
 		create_student(username=request['username'].strip(),password=request['password'].strip())
 		student = check_student_by_username(username=request['username'].strip())
 		return success(data= {'id':student.id,'username':student.username},message='Your verificaton mail has been sent')
