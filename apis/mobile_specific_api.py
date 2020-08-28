@@ -6,6 +6,7 @@ from settings import app
 
 
 
+
 def select_onboard_images ( ) :
 	return [
 		{
@@ -30,5 +31,6 @@ InScholaris' conversational AI Chatbots and framework help you to compare and fi
 
 
 class MobileOnboardImage(Resource):
+
     def get(self):
         return success(data=select_onboard_images(),message='List of onboarding images')
