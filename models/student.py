@@ -84,11 +84,20 @@ class Exam_test_score(db.Model):
 
 
 #### Test score model for language proficiency test
+# class Language_test_score(db.Model):
+#     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
+#     test_id = db.Column(db.Integer, db.ForeignKey('language_test.id'))
+#     exam_date = db.Column(db.Date)
+#     listening_id = db.Column(db.Integer, db.ForeignKey('listening.id'))
+#     reading_id = db.Column(db.Integer, db.ForeignKey('reading.id'))
+#     writing_id = db.Column(db.Integer, db.ForeignKey('writing.id'))
+#     speaking_id = db.Column(db.Integer, db.ForeignKey('speaking.id'))
+
 class Language_test_score(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
-    test_id = db.Column(db.Integer, db.ForeignKey('language_test.id'))
+    # test_id = db.Column(db.Integer, db.ForeignKey('language_test.id'))
     exam_date = db.Column(db.Date)
-    listening_id = db.Column(db.Integer, db.ForeignKey('listening.id'))
-    reading_id = db.Column(db.Integer, db.ForeignKey('reading.id'))
-    writing_id = db.Column(db.Integer, db.ForeignKey('writing.id'))
-    speaking_id = db.Column(db.Integer, db.ForeignKey('speaking.id'))
+    # listening_id = db.Column(db.Integer, db.ForeignKey('listening.id'))
+    # reading_id = db.Column(db.Integer, db.ForeignKey('reading.id'))
+    # writing_id = db.Column(db.Integer, db.ForeignKey('writing.id'))
+    # speaking_id = db.Column(db.Integer, db.ForeignKey('speaking.id'))
