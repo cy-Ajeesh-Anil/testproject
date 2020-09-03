@@ -36,6 +36,7 @@ class Profile(db.Model):
     marital_status = db.Column(db.String)
     email = db.Column(db.String)
     created_on = db.Column(db.DateTime, server_default=db.func.now())
+    phone = db.Column(db.String)
 
 class Emergency_contact(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
