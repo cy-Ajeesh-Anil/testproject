@@ -15,7 +15,9 @@ class DevelopmentConfig(Config):
     BACK_END_URL = 'https://dev-inscholaris-api.herokuapp.com/'
     DEBUG = True
 class LocalDevelopmentConfig(Config):
+
     DB_CONNECTION_STRING = 'postgresql://postgres:postgres@localhost:5432/ins'
+
     # FRONT_END_URL = 'https://dev-inscholaris-web-student.herokuapp.com/#/'
     # BACK_END_URL = 'https://dev-inscholaris-api.herokuapp.com/'
     DEBUG = True
